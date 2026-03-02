@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 
 # Load Model
-with open("Procurement.pkl", "rb") as f:
+with open("Process.pkl", "rb") as f:
     model = pickle.load(f)
 
 st.set_page_config(page_title="Kraljic Category Predictor", layout="centered")
@@ -35,5 +35,6 @@ if st.button("Predict Category"):
     prediction = model.predict(input_data)[0]
     
     st.success(f"✅ Predicted Kraljic Category: {prediction}")
+
 
 st.markdown("---")
